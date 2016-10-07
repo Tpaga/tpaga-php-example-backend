@@ -16,6 +16,7 @@ function create_charge() {
         [ 201, 402 ]
     );
 
+    //TODO add credit card error handling
     $_SESSION["purchase"] = $json_response;
     error_log(print_r($json_response, true));
 }
