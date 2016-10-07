@@ -11,7 +11,7 @@ function tpaga_api_post($url, $data, $expected_http_codes) {
 
     $client = new Client([
         'base_uri' => 'https://sandbox.tpaga.co',
-        'timeout'  => 5,
+        'timeout'  => 30,
         'headers'  => [
             'Content-Type' => 'application/json'
         ],
@@ -41,9 +41,41 @@ function tpaga_api_post($url, $data, $expected_http_codes) {
         die();
     }
 
-    $raw_body = $response->getBody();
+    return json_decode($response->getBody(), true);
+}
 
-    return json_decode($raw_body, true);
+function unsafe_tpaga_api_post($url, $data, $expected_http_codes) {
+    global $TPAGA_API_PRIVATE_TOKEN;
+
+    $client = new Client([
+        'base_uri' => 'https://sandbox.tpaga.co',
+        'timeout'  => 30,
+        'headers'  => [
+            'Content-Type' => 'application/json'
+        ],
+        'http_errors' => false,
+    ]);
+
+    $response = $client->post(
+        $url,
+        [
+            'auth' => [ $TPAGA_API_PRIVATE_TOKEN, '' ],
+            'json' => $data,
+        ]
+    );
+
+    // any 5XX HTTP status code will also be handled by the caller
+    if (
+        !in_array($response->getStatusCode(), $expected_http_codes)
+        && $response->getStatusCode() < 500
+    ) {
+        $_SESSION["error_msg"] = message_for_failed_request($response);
+        # TODO set proper path for redirect
+        header("Location: http://" . $_SERVER[HTTP_HOST] . "/");
+        die();
+    }
+
+    return $response;
 }
 
 function message_for_failed_request($response) {

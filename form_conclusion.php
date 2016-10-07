@@ -9,5 +9,6 @@
         <b>Monto:</b> <?php echo $_SESSION["purchase"]["amount"];?><br>
         <b>ID del pago:</b> <?php echo $_SESSION["purchase"]["id"];?><br>
     </p>
+    <a href="form_cc_data.php">Probar con otra tarjeta de crédito</a>
 </body>
 </html>

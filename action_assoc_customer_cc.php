@@ -11,8 +11,6 @@ function assoc_cc_customer() {
         [ 201 ]
     );
 
-    $_SESSION["tpaga_customer_token"] = null;
-
     $_SESSION["user_cc"] = $json_response;
 }
 
