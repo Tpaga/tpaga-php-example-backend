@@ -108,7 +108,7 @@ $(document).ready(function () {
           <option value="2030">2030</option>
         </select><br>
         CVC:<br>
-        <input type="password" name="cvc" size="10"><br>
+        <input type="password" name="cvc" size="10" value="123"><br>
         <br>
         <input type="submit" value="Submit">
     </form>
@@ -116,7 +116,10 @@ $(document).ready(function () {
     <form id="assoc_customer_cc" action="action_assoc_customer_cc.php" method="POST">
         <input type="hidden" name="tmpCcToken">
     </form>
-</body>
+<br>
+<br>
+<br>
+    <img src="2.png">
 <br>
 <br>
 <br>
@@ -169,4 +172,5 @@ $(document).ready(function () {
 <span style='color:#000000; background:#ffffe8; '>assoc_cc_customer</span><span style='color:#808030; background:#ffffe8; '>(</span><span style='color:#808030; background:#ffffe8; '>)</span><span style='color:#800080; background:#ffffe8; '>;</span><span style='color:#000000; background:#ffffe8; '></span>
 <span style='color:#400000; background:#ffffe8; '>header</span><span style='color:#808030; background:#ffffe8; '>(</span><span style='color:#0000e6; background:#ffffe8; '>"Location: http://"</span><span style='color:#000000; background:#ffffe8; '> </span><span style='color:#808030; background:#ffffe8; '>.</span><span style='color:#000000; background:#ffffe8; '> </span><span style='color:#797997; background:#ffffe8; '>$_SERVER</span><span style='color:#808030; background:#ffffe8; '>[</span><span style='color:#000000; background:#ffffe8; '>HTTP_HOST</span><span style='color:#808030; background:#ffffe8; '>]</span><span style='color:#000000; background:#ffffe8; '> </span><span style='color:#808030; background:#ffffe8; '>.</span><span style='color:#000000; background:#ffffe8; '> </span><span style='color:#0000e6; background:#ffffe8; '>"/form_charge.php"</span><span style='color:#808030; background:#ffffe8; '>)</span><span style='color:#800080; background:#ffffe8; '>;</span><span style='color:#000000; background:#ffffe8; '></span>
 </pre>
+</body>
 </html>

@@ -16,6 +16,10 @@
 <br>
 <br>
 <br>
+<img src="3.png">
+<br>
+<br>
+<br>
 <pre style='color:#000000;background:#ffffe8;'><span style='color:#5f5035; background:#ffffe8; '>&lt;?php</span><span style='color:#000000; background:#ffffe8; '></span>
 <span style='color:#800000; background:#ffffe8; font-weight:bold; '>function</span><span style='color:#000000; background:#ffffe8; '> create_charge</span><span style='color:#808030; background:#ffffe8; '>(</span><span style='color:#808030; background:#ffffe8; '>)</span><span style='color:#000000; background:#ffffe8; '> </span><span style='color:#800080; background:#ffffe8; '>{</span><span style='color:#000000; background:#ffffe8; '></span>
 <span style='color:#000000; background:#ffffe8; '></span>

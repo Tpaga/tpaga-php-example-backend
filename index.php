@@ -11,26 +11,35 @@ if ($_SESSION["error_msg"]) {
     $_SESSION["error_msg"] = null;
 }
 ?>
-    <h1>Paso 1</h1>
-    <h2>Regístrate</h2>
-    <form method="POST" action="action_customer_registration.php">
-        Nombres:<br>
-        <input type="text" name="firstName" value="Numa"><br>
-        Apellidos:<br>
-        <input type="text" name="lastName" value="Nigerio"><br>
-        Sexo:<br>
-        <select name="gender">
-          <option value="M">M</option>
-          <option value="F">F</option>
-          <option value="N/A">N/A</option>
-        </select><br>
-        Correo electrónico:<br>
-        <input type="text" name="email" value="pericodelospalotes@nowhere.org"><br>
-        Número de teléfono:<br>
-        <input type="text" name="phone" value="304567891"><br>
-<br>
-        <input type="submit" value="Submit">
-    </form>
+    <table>
+        <tbody>
+            <tr>
+                <td style="width: 500px">
+                    <h1>Paso 1</h1>
+                    <h2>Regístrate</h2>
+                    <form method="POST" action="action_customer_registration.php">
+                        Nombres:<br>
+                        <input type="text" name="firstName" value="Numa"><br>
+                        Apellidos:<br>
+                        <input type="text" name="lastName" value="Nigerio"><br>
+                        Sexo:<br>
+                        <select name="gender">
+                          <option value="M">M</option>
+                          <option value="F">F</option>
+                          <option value="N/A">N/A</option>
+                        </select><br>
+                        Correo electrónico:<br>
+                        <input type="text" name="email" value="pericodelospalotes@nowhere.org"><br>
+                        Número de teléfono:<br>
+                        <input type="text" name="phone" value="304567891"><br>
+                        <br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </td>
+                <td><img src="1.png"></td>
+            </tr>
+        </tbody>
+    </table>
 
 <br>
 <br>
