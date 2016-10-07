@@ -1,4 +1,51 @@
 <?php
+require 'vendor/autoload.php';
+
+include 'secrets.php';
+
+use GuzzleHttp\Client;
+
+
+function tpaga_api_post($url, $data, $expected_http_codes) {
+    global $TPAGA_API_PRIVATE_TOKEN;
+
+    $client = new Client([
+        'base_uri' => 'https://sandbox.tpaga.co',
+        'timeout'  => 5,
+        'headers'  => [
+            'Content-Type' => 'application/json'
+        ],
+        'http_errors' => false,
+    ]);
+
+    $response = null;
+
+    try {
+        $response = $client->post(
+            $url,
+            [
+                'auth' => [ $TPAGA_API_PRIVATE_TOKEN, '' ],
+                'json' => $data,
+            ]
+        );
+    } catch (Exception $e) {
+        error_log("Caught exception: " . $e->getMessage());
+        header("Location: http://" . $_SERVER[HTTP_HOST] . "/");
+        die();
+    }
+
+    if (!in_array($response->getStatusCode(), $expected_http_codes)) {
+        $_SESSION["error_msg"] = message_for_failed_request($response);
+        # TODO set proper path for redirect
+        header("Location: http://" . $_SERVER[HTTP_HOST] . "/");
+        die();
+    }
+
+    $raw_body = $response->getBody();
+
+    return json_decode($raw_body, true);
+}
+
 function message_for_failed_request($response) {
     $http_status_code = $response->getStatusCode();
 

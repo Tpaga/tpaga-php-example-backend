@@ -11,22 +11,22 @@ if ($_SESSION["error_msg"]) {
     $_SESSION["error_msg"] = null;
 }
 ?>
-    <h1>Step 1</h1>
-    <h2>Register yourself</h2>
-    <form method="POST" action="customer_registration.php">
-        First name:<br>
+    <h1>Paso 1</h1>
+    <h2>Regístrate</h2>
+    <form method="POST" action="action_customer_registration.php">
+        Nombres:<br>
         <input type="text" name="firstName" value="Numa"><br>
-        Last name:<br>
+        Apellidos:<br>
         <input type="text" name="lastName" value="Nigerio"><br>
-        Gender:<br>
+        Sexo:<br>
         <select name="gender">
           <option value="M">M</option>
           <option value="F">F</option>
           <option value="N/A">N/A</option>
         </select><br>
-        Email:<br>
+        Correo electrónico:<br>
         <input type="text" name="email" value="pericodelospalotes@nowhere.org"><br>
-        Phone:<br>
+        Número de teléfono:<br>
         <input type="text" name="phone" value="304567891"><br>
 <br>
         <input type="submit" value="Submit">
