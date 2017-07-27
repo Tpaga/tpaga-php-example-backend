@@ -11,6 +11,46 @@
         <input type="hidden" name="amount" value="100000">
         <input type="hidden" name="creditCard" value="<?php echo $_SESSION["user_cc"]["id"];?>">
         <br>
+
+       Número de cuotas:<br>
+        <select name="installments">
+          <option value="01" selected>01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="02">13</option>
+          <option value="03">14</option>
+          <option value="04">15</option>
+          <option value="05">16</option>
+          <option value="06">17</option>
+          <option value="07">18</option>
+          <option value="08">19</option>
+          <option value="09">20</option>
+          <option value="10">21</option>
+          <option value="11">22</option>
+          <option value="12">23</option>
+          <option value="02">24</option>
+          <option value="03">25</option>
+          <option value="04">26</option>
+          <option value="05">27</option>
+          <option value="06">28</option>
+          <option value="07">29</option>
+          <option value="08">30</option>
+          <option value="09">31</option>
+          <option value="10">32</option>
+          <option value="11">33</option>
+          <option value="12">34</option>
+          <option value="12">35</option>
+          <option value="12">36</option>
+        </select><br><br>
         <input type="submit" value="Submit">
     </form>
 <br>

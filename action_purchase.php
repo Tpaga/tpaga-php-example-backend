@@ -15,6 +15,7 @@ function create_charge() {
                 'amount' => intval($_POST["amount"]),
                 'currency' => "COP",
                 'creditCard' => $_POST["creditCard"],
+                'installments' => $_POST["installments"],
             ],
             [ 201, 402 ]
         );
